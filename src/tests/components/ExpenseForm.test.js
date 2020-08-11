@@ -78,17 +78,17 @@ test('should call onSubmit prop for valid form submission', () => {
     });
 })
 
-test('should set new date on date change', () => {
-    const now = moment();
-    const wrapper = shallow(<ExpenseForm />);
-    wrapper.find('SingleDatePicker').prop('onDateChange')(now);
+// test('should set new date on date change', () => {
+//     const now = moment();
+//     const wrapper = shallow(<ExpenseForm />);
+//     wrapper.find('SingleDatePicker').prop('onDateChange')(now);
 
-    expect(wrapper.state('createdAt')).toEqual(now);
-})
+//     expect(wrapper.state('createdAt')).toEqual(now);
+// })
 
-test('should set focus on new date', () => {
-    const focused = true;
-    const wrapper = shallow(<ExpenseForm />);
-    wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused });
-    expect(wrapper.state('calendarFocused')).toEqual(focused);
-})
+// test('should set focus on new date', () => {
+//     const focused = true;
+//     const wrapper = shallow(<ExpenseForm />);
+//     wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused });
+//     expect(wrapper.state('calendarFocused')).toEqual(focused);
+// })
